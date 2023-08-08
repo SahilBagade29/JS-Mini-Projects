@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #00fbfb;
+  --secondary-color: #f9f9f9;
+  --compliment-color: #fff676;
+  --body-background: linear-gradient(to right, #000000, #837a7a);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--body-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  position: relative;
+  border: 0.5em solid var(--compliment-color);
+  color: var(--secondary-color);
+  box-shadow: 0px 0px 8px 8px #000000, 0px 0px 8px 8px #000000 inset;
+}
+
+.center-dot {
+  height: 0.7em;
+  width: 0.7em;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  border: 0.1em solid var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.hand {
+  background: var(--compliment-color);
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  border-radius: 0.5em;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  height: 6px;
+  width: 30%;
+  z-index: 3;
+}
+
+.minute-hand {
+  height: 3px;
+  z-index: 4;
+  width: 40%;
+}
+
+.second-hand {
+  background: var(--primary-color);
+  width: 45%;
+  z-index: 5;
+  height: 2px;
+}
+
+.clock-digits {
+  position: absolute;
+  top: 6%;
+  left: 48%;
+  list-style: none;
+}
+
+li {
+  position: absolute;
+  transform-origin: 5px 8.5rem;
+  font-size: 1.3rem;
+}
+
+.time-digits {
+  position: absolute;
+}
+
+.clock-digits li:nth-child(3n-2) {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
