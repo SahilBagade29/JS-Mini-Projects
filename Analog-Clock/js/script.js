@@ -24,4 +24,4 @@ function currentTime() {
   minuteHand.style.transform = `rotate(${minDeg}deg)`;
   secondHand.style.transform = `rotate(${secDeg}deg)`;
 }
-setInterval(currentTime, 1000);
+setInterval(currentTime, 100000);
